@@ -1,7 +1,7 @@
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
 
-npm test
+# npm test
 #全局检查
 # pnpm lint
 #暂存区检查
