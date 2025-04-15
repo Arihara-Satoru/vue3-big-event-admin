@@ -28,7 +28,8 @@ export default defineConfig([
     languageOptions: {
       // 定义全局变量，支持浏览器环境下的全局变量
       globals: {
-        ...globals.browser
+        ...globals.browser,
+        ElMessage: 'readonly'
       }
     },
     // 定义插件
@@ -75,3 +76,10 @@ export default defineConfig([
     }
   }
 ])
+// module.exports = {
+//   globals: {
+//     ElMessage: 'readonly',
+//     ElMessageBox: 'readonly',
+//     ElLoading: 'readonly'
+//   }
+// }

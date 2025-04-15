@@ -1,5 +1,5 @@
 import axios from 'axios'
-import { useUserStore } from '@/stores/user'
+import { useUserStore } from '@/stores/modelus/user'
 import { ElMessage } from 'element-plus'
 import router from '@/router'
 
@@ -27,12 +27,12 @@ instance.interceptors.request.use(
 //响应拦截器
 instance.interceptors.response.use(
   (res) => {
-    if (res.data.code !== 0) {
+    if (res.data.code === 0) {
       return res
     }
     // TODO 3. 处理业务失败
     // TODO 4. 摘取核心响应数据
-    ElMessage.error(res.data.message || '请求失败')
+    ElMessage({ message: res.data.message || '服务异常', type: 'error' })
     return Promise.reject(res.data)
   },
   (err) => {
@@ -40,7 +40,10 @@ instance.interceptors.response.use(
     if (err.response?.status === 401) {
       router.push('/login')
     }
-    ElMessage.error(err.data.message || '请求失败')
+    ElMessage({
+      message: err.response.data.message || '服务异常',
+      type: 'error'
+    })
     return Promise.reject(err)
   }
 )
