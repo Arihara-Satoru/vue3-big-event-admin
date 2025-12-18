@@ -14,9 +14,15 @@ importers:
       '@vueup/vue-quill':
         specifier: ^1.2.0
         version: 1.2.0(vue@3.5.13)
+      '@vueuse/core':
+        specifier: ^14.1.0
+        version: 14.1.0(vue@3.5.13)
       axios:
         specifier: ^1.8.4
         version: 1.8.4
+      echarts:
+        specifier: ^6.0.0
+        version: 6.0.0
       element-plus:
         specifier: ^2.9.7
         version: 2.9.7(vue@3.5.13)
@@ -26,6 +32,9 @@ importers:
       vue:
         specifier: ^3.5.13
         version: 3.5.13
+      vue-i18n:
+        specifier: ^11.2.2
+        version: 11.2.2(vue@3.5.13)
       vue-router:
         specifier: ^4.5.0
         version: 4.5.0(vue@3.5.13)
@@ -68,7 +77,7 @@ importers:
         version: 1.86.3
       unplugin-auto-import:
         specifier: ^19.1.2
-        version: 19.1.2(@nuxt/kit@3.16.2)(@vueuse/core@9.13.0(vue@3.5.13))
+        version: 19.1.2(@nuxt/kit@3.16.2)(@vueuse/core@14.1.0(vue@3.5.13))
       unplugin-vue-components:
         specifier: ^28.4.1
         version: 28.4.1(@babel/parser@7.27.0)(@nuxt/kit@3.16.2)(vue@3.5.13)
@@ -454,6 +463,18 @@ packages:
     resolution: {integrity: sha512-xeO57FpIu4p1Ri3Jq/EXq4ClRm86dVF2z/+kvFnyqVYRavTZmaFaUBbWCOuuTh0o/g7DSsk6kc2vrS4Vl5oPOQ==}
     engines: {node: '>=18.18'}
 
+  '@intlify/core-base@11.2.2':
+    resolution: {integrity: sha512-0mCTBOLKIqFUP3BzwuFW23hYEl9g/wby6uY//AC5hTgQfTsM2srCYF2/hYGp+a5DZ/HIFIgKkLJMzXTt30r0JQ==}
+    engines: {node: '>= 16'}
+
+  '@intlify/message-compiler@11.2.2':
+    resolution: {integrity: sha512-XS2p8Ff5JxWsKhgfld4/MRQzZRQ85drMMPhb7Co6Be4ZOgqJX1DzcZt0IFgGTycgqL8rkYNwgnD443Q+TapOoA==}
+    engines: {node: '>= 16'}
+
+  '@intlify/shared@11.2.2':
+    resolution: {integrity: sha512-OtCmyFpSXxNu/oET/aN6HtPCbZ01btXVd0f3w00YsHOb13Kverk1jzA2k47pAekM55qbUw421fvPF1yxZ+gicw==}
+    engines: {node: '>= 16'}
+
   '@jridgewell/gen-mapping@0.3.8':
     resolution: {integrity: sha512-imAbBGkb+ebQyxKgzv5Hu2nmROxoDOXHh80evxdoXNOrvAnVx7zimzc1Oo5h9RlfV4vPXaE2iM5pOFbvOCClWA==}
     engines: {node: '>=6.0.0'}
@@ -715,6 +736,9 @@ packages:
   '@types/web-bluetooth@0.0.16':
     resolution: {integrity: sha512-oh8q2Zc32S6gd/j50GowEjKLoOVOwHP/bWVjKJInBwQqdOYMdPrf1oVlelTlyfFK3CKxL1uahMDAr+vy8T7yMQ==}
 
+  '@types/web-bluetooth@0.0.21':
+    resolution: {integrity: sha512-oIQLCGWtcFZy2JW77j9k8nHzAOpqMHLQejDA48XXMWH6tjCQHz5RCFz1bzsmROyL6PUm+LLnUiI4BCn221inxA==}
+
   '@vitejs/plugin-vue@5.2.3':
     resolution: {integrity: sha512-IYSLEQj4LgZZuoVpdSUCw3dIynTWQgPlaRP6iAvMle4My0HdYwr5g5wQAfwOeHQBmYwEkqF70nRpSilr6PoUDg==}
     engines: {node: ^18.0.0 || >=20.0.0}
@@ -795,11 +819,24 @@ packages:
     peerDependencies:
       vue: ^3.2.41
 
+  '@vueuse/core@14.1.0':
+    resolution: {integrity: sha512-rgBinKs07hAYyPF834mDTigH7BtPqvZ3Pryuzt1SD/lg5wEcWqvwzXXYGEDb2/cP0Sj5zSvHl3WkmMELr5kfWw==}
+    peerDependencies:
+      vue: ^3.5.0
+
   '@vueuse/core@9.13.0':
     resolution: {integrity: sha512-pujnclbeHWxxPRqXWmdkKV5OX4Wk4YeK7wusHqRwU0Q7EFusHoqNA/aPhB6KCh9hEqJkLAJo7bb0Lh9b+OIVzw==}
 
+  '@vueuse/metadata@14.1.0':
+    resolution: {integrity: sha512-7hK4g015rWn2PhKcZ99NyT+ZD9sbwm7SGvp7k+k+rKGWnLjS/oQozoIZzWfCewSUeBmnJkIb+CNr7Zc/EyRnnA==}
+
   '@vueuse/metadata@9.13.0':
     resolution: {integrity: sha512-gdU7TKNAUVlXXLbaF+ZCfte8BjRJQWPCa2J55+7/h+yDtzw3vOoGQDRXzI6pyKyo6bXFT5/QoPE4hAknExjRLQ==}
+
+  '@vueuse/shared@14.1.0':
+    resolution: {integrity: sha512-EcKxtYvn6gx1F8z9J5/rsg3+lTQnvOruQd8fUecW99DCK04BkWD7z5KQ/wTAx+DazyoEE9dJt/zV8OIEQbM6kw==}
+    peerDependencies:
+      vue: ^3.5.0
 
   '@vueuse/shared@9.13.0':
     resolution: {integrity: sha512-UrnhU+Cnufu4S6JLCPZnkWh0WwZGUp72ktOF2DFptMlOs3TOdVv8xJN53zhHGARmVOsz5KqOls09+J1NR6sBKw==}
@@ -1050,6 +1087,9 @@ packages:
   dunder-proto@1.0.1:
     resolution: {integrity: sha512-KIN/nDJBQRcXw0MLVhZE9iQHmG68qAVIBg9CqmUYjmQIhgij9U5MFvrqkUL5FbtyyzZuOeOt0zdeRe4UY7ct+A==}
     engines: {node: '>= 0.4'}
+
+  echarts@6.0.0:
+    resolution: {integrity: sha512-Tte/grDQRiETQP4xz3iZWSvoHrkCQtwqd6hs+mifXcjrCuo2iKWbajFObuLJVBlDIJlOzgQPd1hsaKt/3+OMkQ==}
 
   electron-to-chromium@1.5.136:
     resolution: {integrity: sha512-kL4+wUTD7RSA5FHx5YwWtjDnEEkIIikFgWHR4P6fqjw1PPLlqYkxeOb++wAauAssat0YClCy8Y3C5SxgSkjibQ==}
@@ -1997,6 +2037,9 @@ packages:
     resolution: {integrity: sha512-sf4i37nQ2LBx4m3wB74y+ubopq6W/dIzXg0FDGjsYnZHVa1Da8FH853wlL2gtUhg+xJXjfk3kUZS3BRoQeoQBQ==}
     engines: {node: '>=6'}
 
+  tslib@2.3.0:
+    resolution: {integrity: sha512-N82ooyxVNm6h1riLCoyS9e3fuJ3AMG2zIZs2Gd1ATcSFjSA23Q0fzjjZeh0jbJvWVDZ0cJT8yaNNaaXHzueNjg==}
+
   tslib@2.8.1:
     resolution: {integrity: sha512-oJFu94HQb+KVduSUQL7wnpmqnfmLsOA/nAh6b6EH0wCEoK0/mPeXU6c3wKDV83MkOuHPRHtSXKKU99IBazS/2w==}
 
@@ -2154,6 +2197,12 @@ packages:
     peerDependencies:
       eslint: ^8.57.0 || ^9.0.0
 
+  vue-i18n@11.2.2:
+    resolution: {integrity: sha512-ULIKZyRluUPRCZmihVgUvpq8hJTtOqnbGZuv4Lz+byEKZq4mU0g92og414l6f/4ju+L5mORsiUuEPYrAuX2NJg==}
+    engines: {node: '>= 16'}
+    peerDependencies:
+      vue: ^3.0.0
+
   vue-router@4.5.0:
     resolution: {integrity: sha512-HDuk+PuH5monfNuY+ct49mNmkCRK4xJAV9Ts4z9UFc4rzdDnxQLyCMGGc8pKhZhHTVzfanpNwB/lwqevcBwI4w==}
     peerDependencies:
@@ -2202,6 +2251,9 @@ packages:
   yoctocolors@2.1.1:
     resolution: {integrity: sha512-GQHQqAopRhwU8Kt1DDM8NjibDXHC8eoh1erhGAJPEyveY9qqVeXvVikNKrDz69sHowPMorbPUrH/mx8c50eiBQ==}
     engines: {node: '>=18'}
+
+  zrender@6.0.0:
+    resolution: {integrity: sha512-41dFXEEXuJpNecuUQq6JlbybmnHaqqpGlbH1yxnA5V9MMP4SbohSVZsJIwz+zdjQXSSlR1Vc34EgH1zxyTDvhg==}
 
 snapshots:
 
@@ -2554,6 +2606,18 @@ snapshots:
 
   '@humanwhocodes/retry@0.4.2': {}
 
+  '@intlify/core-base@11.2.2':
+    dependencies:
+      '@intlify/message-compiler': 11.2.2
+      '@intlify/shared': 11.2.2
+
+  '@intlify/message-compiler@11.2.2':
+    dependencies:
+      '@intlify/shared': 11.2.2
+      source-map-js: 1.2.1
+
+  '@intlify/shared@11.2.2': {}
+
   '@jridgewell/gen-mapping@0.3.8':
     dependencies:
       '@jridgewell/set-array': 1.2.1
@@ -2763,6 +2827,8 @@ snapshots:
 
   '@types/web-bluetooth@0.0.16': {}
 
+  '@types/web-bluetooth@0.0.21': {}
+
   '@vitejs/plugin-vue@5.2.3(vite@6.2.6(jiti@2.4.2)(sass@1.86.3)(yaml@2.7.1))(vue@3.5.13)':
     dependencies:
       vite: 6.2.6(jiti@2.4.2)(sass@1.86.3)(yaml@2.7.1)
@@ -2898,6 +2964,13 @@ snapshots:
       quill-delta: 4.2.2
       vue: 3.5.13
 
+  '@vueuse/core@14.1.0(vue@3.5.13)':
+    dependencies:
+      '@types/web-bluetooth': 0.0.21
+      '@vueuse/metadata': 14.1.0
+      '@vueuse/shared': 14.1.0(vue@3.5.13)
+      vue: 3.5.13
+
   '@vueuse/core@9.13.0(vue@3.5.13)':
     dependencies:
       '@types/web-bluetooth': 0.0.16
@@ -2908,7 +2981,13 @@ snapshots:
       - '@vue/composition-api'
       - vue
 
+  '@vueuse/metadata@14.1.0': {}
+
   '@vueuse/metadata@9.13.0': {}
+
+  '@vueuse/shared@14.1.0(vue@3.5.13)':
+    dependencies:
+      vue: 3.5.13
 
   '@vueuse/shared@9.13.0(vue@3.5.13)':
     dependencies:
@@ -3157,6 +3236,11 @@ snapshots:
       call-bind-apply-helpers: 1.0.2
       es-errors: 1.3.0
       gopd: 1.2.0
+
+  echarts@6.0.0:
+    dependencies:
+      tslib: 2.3.0
+      zrender: 6.0.0
 
   electron-to-chromium@1.5.136: {}
 
@@ -4118,6 +4202,8 @@ snapshots:
 
   totalist@3.0.1: {}
 
+  tslib@2.3.0: {}
+
   tslib@2.8.1: {}
 
   type-check@0.4.0:
@@ -4154,7 +4240,7 @@ snapshots:
 
   universalify@2.0.1: {}
 
-  unplugin-auto-import@19.1.2(@nuxt/kit@3.16.2)(@vueuse/core@9.13.0(vue@3.5.13)):
+  unplugin-auto-import@19.1.2(@nuxt/kit@3.16.2)(@vueuse/core@14.1.0(vue@3.5.13)):
     dependencies:
       local-pkg: 1.1.1
       magic-string: 0.30.17
@@ -4164,7 +4250,7 @@ snapshots:
       unplugin-utils: 0.2.4
     optionalDependencies:
       '@nuxt/kit': 3.16.2
-      '@vueuse/core': 9.13.0(vue@3.5.13)
+      '@vueuse/core': 14.1.0(vue@3.5.13)
 
   unplugin-utils@0.2.4:
     dependencies:
@@ -4295,6 +4381,13 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
+  vue-i18n@11.2.2(vue@3.5.13):
+    dependencies:
+      '@intlify/core-base': 11.2.2
+      '@intlify/shared': 11.2.2
+      '@vue/devtools-api': 6.6.4
+      vue: 3.5.13
+
   vue-router@4.5.0(vue@3.5.13):
     dependencies:
       '@vue/devtools-api': 6.6.4
@@ -4331,3 +4424,7 @@ snapshots:
   yocto-queue@0.1.0: {}
 
   yoctocolors@2.1.1: {}
+
+  zrender@6.0.0:
+    dependencies:
+      tslib: 2.3.0

@@ -3,6 +3,9 @@ import { provide, ref } from 'vue'
 import { artGetChannelsService, artDelChannelService } from '@/api/article'
 import { Edit, Delete } from '@element-plus/icons-vue'
 import ChannelEdit from './components/ChannelEdit.vue'
+import { useI18n } from 'vue-i18n'
+
+const { t } = useI18n()
 const channelList = ref([])
 const isLoading = ref(false)
 const dialog = ref()
@@ -22,13 +25,17 @@ const onEditChannel = (row) => {
   console.log(row)
 }
 const onDelChannel = async (row) => {
-  await ElMessageBox.confirm('你确认删除该分类信息吗？', '温馨提示', {
-    type: 'warning',
-    confirmButtonText: '确认',
-    cancelButtonText: '取消'
-  })
+  await ElMessageBox.confirm(
+    t('article.confirmDeleteChannel'),
+    t('common.tip'),
+    {
+      type: 'warning',
+      confirmButtonText: t('common.confirm'),
+      cancelButtonText: t('common.cancel')
+    }
+  )
   await artDelChannelService(row.id)
-  ElMessage({ type: 'success', message: '删除成功' })
+  ElMessage({ type: 'success', message: t('common.deleteSuccess') })
   getChannelList()
 }
 
@@ -38,16 +45,25 @@ const onAddChannel = () => {
 </script>
 
 <template>
-  <page-container title="文章频道">
+  <page-container :title="$t('article.channel')">
     <template #extra>
-      <el-button type="primary" @click="onAddChannel">添加分类</el-button>
+      <el-button type="primary" @click="onAddChannel">
+        {{ $t('article.addChannel') }}
+      </el-button>
     </template>
 
     <el-table v-loading="isLoading" :data="channelList" style="width: 100%">
-      <el-table-column label="序号" width="100" type="index"></el-table-column>
-      <el-table-column label="分类名称" prop="cate_name"></el-table-column>
-      <el-table-column label="分类别名" prop="cate_alias"></el-table-column>
-      <el-table-column label="操作" width="100">
+      <el-table-column
+        :label="$t('common.index')"
+        width="100"
+        type="index"></el-table-column>
+      <el-table-column
+        :label="$t('article.channelName')"
+        prop="cate_name"></el-table-column>
+      <el-table-column
+        :label="$t('article.channelAlias')"
+        prop="cate_alias"></el-table-column>
+      <el-table-column :label="$t('common.operation')" width="100">
         <template #default="{ row, $index }">
           <el-button
             :icon="Edit"
@@ -64,7 +80,7 @@ const onAddChannel = () => {
         </template>
       </el-table-column>
       <template #empty>
-        <el-empty description="没有数据" />
+        <el-empty :description="$t('common.noData')" />
       </template>
     </el-table>
     <ChannelEdit ref="dialog"></ChannelEdit>

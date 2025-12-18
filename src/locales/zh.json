@@ -1,0 +1,49 @@
+{
+  "nav": {
+    "dashboard": "仪表盘",
+    "articleManage": "文章管理",
+    "articleChannel": "文章分类",
+    "userProfile": "个人详情",
+    "userAvatar": "更换头像",
+    "userPassword": "重置密码",
+    "health": "系统健康度"
+  },
+  "common": {
+    "logout": "退出登录",
+    "confirm": "确认",
+    "cancel": "取消",
+    "edit": "编辑",
+    "delete": "删除",
+    "add": "添加",
+    "tip": "温馨提示",
+    "success": "操作成功",
+    "deleteSuccess": "删除成功",
+    "noData": "没有数据",
+    "operation": "操作",
+    "index": "序号"
+  },
+  "article": {
+    "channel": "文章分类",
+    "manage": "文章管理",
+    "channelName": "分类名称",
+    "channelAlias": "分类别名",
+    "addChannel": "添加分类",
+    "confirmDeleteChannel": "你确认删除该分类信息吗？",
+    "search": "搜索",
+    "reset": "重置",
+    "title": "文章标题",
+    "state": "发布状态",
+    "pubDate": "发布时间",
+    "published": "已发布",
+    "draft": "草稿"
+  },
+  "health": {
+    "title": "系统健康度监控",
+    "fp": "首屏加载时间",
+    "api": "接口响应时间",
+    "status": "系统状态",
+    "normal": "正常",
+    "warning": "警告",
+    "error": "异常"
+  }
+}

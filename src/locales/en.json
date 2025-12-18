@@ -1,0 +1,49 @@
+{
+  "nav": {
+    "dashboard": "Dashboard",
+    "articleManage": "Article Management",
+    "articleChannel": "Article Channel",
+    "userProfile": "User Profile",
+    "userAvatar": "Change Avatar",
+    "userPassword": "Reset Password",
+    "health": "System Health"
+  },
+  "common": {
+    "logout": "Logout",
+    "confirm": "Confirm",
+    "cancel": "Cancel",
+    "edit": "Edit",
+    "delete": "Delete",
+    "add": "Add",
+    "tip": "Tip",
+    "success": "Success",
+    "deleteSuccess": "Delete Success",
+    "noData": "No Data",
+    "operation": "Operation",
+    "index": "Index"
+  },
+  "article": {
+    "channel": "Article Channel",
+    "manage": "Article Management",
+    "channelName": "Channel Name",
+    "channelAlias": "Channel Alias",
+    "addChannel": "Add Channel",
+    "confirmDeleteChannel": "Are you sure you want to delete this channel?",
+    "search": "Search",
+    "reset": "Reset",
+    "title": "Article Title",
+    "state": "State",
+    "pubDate": "Publish Date",
+    "published": "Published",
+    "draft": "Draft"
+  },
+  "health": {
+    "title": "System Health Monitoring",
+    "fp": "First Paint Time",
+    "api": "API Response Time",
+    "status": "System Status",
+    "normal": "Normal",
+    "warning": "Warning",
+    "error": "Error"
+  }
+}

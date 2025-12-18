@@ -1,6 +1,7 @@
 body {
   margin: 0;
-  background-color: #f5f5f5;
+  background-color: var(--el-bg-color-page);
+  color: var(--el-text-color-primary);
 }
 
 /* fade-slide */
