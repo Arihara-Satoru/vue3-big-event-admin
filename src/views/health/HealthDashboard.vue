@@ -1,9 +1,24 @@
 <script setup>
 import { ref, onMounted, watch } from 'vue'
-import * as echarts from 'echarts'
+import { init, use } from 'echarts/core'
+import { LineChart } from 'echarts/charts'
+import {
+  GridComponent,
+  TitleComponent,
+  TooltipComponent
+} from 'echarts/components'
+import { CanvasRenderer } from 'echarts/renderers'
 import { useHealthStore } from '@/stores/modelus/health'
 import { storeToRefs } from 'pinia'
 import { useI18n } from 'vue-i18n'
+
+use([
+  LineChart,
+  GridComponent,
+  TitleComponent,
+  TooltipComponent,
+  CanvasRenderer
+])
 
 const { t } = useI18n()
 const healthStore = useHealthStore()
@@ -14,7 +29,7 @@ let myChart = null
 
 const initChart = () => {
   if (chartRef.value) {
-    myChart = echarts.init(chartRef.value)
+    myChart = init(chartRef.value)
     updateChart()
   }
 }
